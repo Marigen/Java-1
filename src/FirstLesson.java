@@ -26,41 +26,41 @@ public class FirstLesson {
 
     public static void main(String[] args) {
 
-        System.out.println(secondTask(5, 6, 8, 10));
+        System.out.println(performCalculation(5, 6, 8, 10));
+        System.out.println(performCalculation(563.3f, 3.1f, 50, 10));
 
-        System.out.println(thirdTask(5, 10));
-        System.out.println(thirdTask(10, 15));
+        System.out.println(isSumInRange(5, 10));
+        System.out.println(isSumInRange(10, 15));
 
-        fourthTaskSecondVariant(10, 20);
-        fourthTaskSecondVariant(5, 6);
+        ifSumInRange(10, 20);
+        ifSumInRange(5, 6);
 
-        fifthTask(5);
-        fifthTask(-1);
+        isPositive(5);
+        isPositive(-1);
 
-        sixthTask(-2);
-        sixthTask(2);
+        isNegative(-2);
+        isNegative(2);
 
-        seventhTask("Илья");
-        seventhTask("Igor");
+        printHelloUser("Илья");
+        printHelloUser("Igor");
 
-        eighthTask(4);
-        eighthTask(3);
-        eighthTask(108);
-        eighthTask(100);
-        eighthTask(200);
-        eighthTask(400);
-        eighthTask(800);
-        eighthTask(900);
+        leapYearCalculation(4);
+        leapYearCalculation(3);
+        leapYearCalculation(108);
+        leapYearCalculation(100);
+        leapYearCalculation(200);
+        leapYearCalculation(400);
+        leapYearCalculation(800);
+        leapYearCalculation(900);
 
     }
 
-    public static int secondTask(int a, int b, int c, int d) {
+    public static float performCalculation(float a, float b, float c, float d) {
+
         return a * (b + (c / d));
-        //TODO Стоит ли в return выносить выражение?
-        // Или лучше объявить новую переменную, равную этому выражению и возвращать ее?
     }
 
-    public static String thirdTask(int a, int b) {
+    public static String isSumInRange(int a, int b) {
         int c = a + b;
 
         String result = c >= 10 & c <= 20 ? "Сумма чисел " + a + " и " + b + " удовлетворяет условию задачи" :
@@ -69,7 +69,7 @@ public class FirstLesson {
         return result;
     }
 
-    public static void fourthTaskSecondVariant(int a, int b) {
+    public static void ifSumInRange(int a, int b) {
         int c = a + b;
 
         if (c >= 10 & c <= 20) {
@@ -79,7 +79,7 @@ public class FirstLesson {
         }
     }
 
-    public static void fifthTask(int a) {
+    public static void isPositive(int a) {
         if (a >= 0) {
             System.out.println("Передано положительное число");
         } else {
@@ -87,17 +87,17 @@ public class FirstLesson {
         }
     }
 
-    public static void sixthTask(int a) {
+    public static void isNegative(int a) {
         if (a < 0) {
             System.out.println(true);
         }
     }
 
-    public static void seventhTask(String name) {
+    public static void printHelloUser(String name) {
         System.out.println("Привет, " + name + "!");
     }
 
-    public static void eighthTask(int a) {
+    public static void leapYearCalculation(int a) {
         if (a % 400 == 0 || a % 4 == 0 && a % 100 != 0) {
             System.out.println(a + " - високосный год");
         } else {
