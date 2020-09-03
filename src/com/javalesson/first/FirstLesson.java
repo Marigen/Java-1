@@ -1,3 +1,5 @@
+package com.javalesson.first;
+
 public class FirstLesson {
 
     //Примитивные типы данных:
